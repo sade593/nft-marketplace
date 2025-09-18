@@ -8,6 +8,7 @@
     <DiscoverNfts />
     <MashroomSection />
     <WeeklyDigest />
+    <Footer />
   </div>
 </template>
 
@@ -20,4 +21,5 @@ import BrowseCategories from './components/sections/BrowseCategories.vue';
 import DiscoverNfts from './components/sections/DiscoverNfts.vue';
 import MashroomSection from './components/sections/MashroomSection.vue';
 import WeeklyDigest from './components/sections/WeeklyDigest.vue';
+import Footer from './components/sections/Footer.vue';
 </script>
