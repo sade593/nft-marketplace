@@ -7,7 +7,7 @@
         <p class="text-white mt-2">Find Out How To Get Started</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
         
         <div class="bg-[#3B3B3B] rounded-2xl p-8 flex flex-col items-center text-center gap-5">
           <img :src="image1" alt="Setup Wallet Icon" class="w-40 h-40">

@@ -19,10 +19,10 @@
             </div>
           </div>
           <div>
-            <h5 class="text-white font-semibold text-xl">DSGN Animals</h5>
+            <h5 class="text-white font-semibold text-[22px] leading-[140%]">DSGN Animals</h5>
             <div class="flex items-center gap-3 mt-2">
               <img :src="artistAvatar1" alt="MrFox Avatar" class="h-6 w-6 rounded-full" />
-              <span class="text-white">MrFox</span>
+              <span class="text-white font-normal text-base leading-[140%]">MrFox</span>
             </div>
           </div>
         </div>
@@ -37,10 +37,10 @@
             </div>
           </div>
           <div>
-            <h5 class="text-white font-semibold text-xl">Magic Mushrooms</h5>
+            <h5 class="text-white font-semibold text-[22px] leading-[140%]">Magic Mushrooms</h5>
             <div class="flex items-center gap-3 mt-2">
               <img :src="artistAvatar2" alt="Shroomie Avatar" class="h-6 w-6 rounded-full" />
-              <span class="text-white">Shroomie</span>
+              <span class="text-white font-normal text-base leading-[140%]">Shroomie</span>
             </div>
           </div>
         </div>
@@ -55,33 +55,31 @@
             </div>
           </div>
           <div>
-            <h5 class="text-white font-semibold text-xl">Disco Machines</h5>
+            <h5 class="text-white font-semibold text-[22px] leading-[140%]">Disco Machines</h5>
             <div class="flex items-center gap-3 mt-2">
               <img :src="artistAvatar3" alt="BeKind2Robots Avatar" class="h-6 w-6 rounded-full" />
-              <span class="text-white">BeKind2Robots</span>
+              <span class="text-white font-normal text-base leading-[140%]">BeKind2Robots</span>
+            </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-  </div>
 </template>
 
 <script setup>
-// Using your new, correctly named files
 import mainImage1 from '@/assets/images/dsgn-animals-main.png';
 import secondaryImage1 from '@/assets/images/dsgn-animals-thumb1.png';
 import secondaryImage2 from '@/assets/images/dsgn-animals-thumb2.png';
-import artistAvatar1 from '@/assets/images/creator-6.png'; // MrFox is creator #6
+import artistAvatar1 from '@/assets/images/creator-6.png';
 
 import mainImage2 from '@/assets/images/magic-mushrooms-main.png';
 import secondaryImage3 from '@/assets/images/magic-mushrooms-thumb1.png';
 import secondaryImage4 from '@/assets/images/magic-mushrooms-thumb2.png';
-import artistAvatar2 from '@/assets/images/creator-7.png'; // Shroomie is creator #7
+import artistAvatar2 from '@/assets/images/creator-7.png';
 
 import mainImage3 from '@/assets/images/disco-machines-main.png';
 import secondaryImage5 from '@/assets/images/disco-machines-thumb1.png';
 import secondaryImage6 from '@/assets/images/disco-machines-thumb2.png';
-import artistAvatar3 from '@/assets/images/creator-10.png'; // BeKind2Robots is animakid/creator #10
+import artistAvatar3 from '@/assets/images/creator-10.png';
 </script>

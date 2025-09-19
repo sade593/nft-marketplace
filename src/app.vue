@@ -1,25 +1,29 @@
 <template>
-  <div class="bg-[#2B2B2B]">
+  <div class="bg-[#2B2B2B] flex flex-col min-h-screen no-scrollbar">
     <Navbar />
-    <HeroSection />
-    <TrendingCollection />
-    <TopCreators />
-    <BrowseCategories />
-    <DiscoverNfts />
-    <MashroomSection />
-    <WeeklyDigest />
+    <main class="flex-grow">
+      <router-view /> 
+    </main>
     <Footer />
   </div>
 </template>
 
 <script setup>
 import Navbar from './components/Navbar.vue';
-import HeroSection from './components/HeroSection.vue';
-import TrendingCollection from './components/sections/TrendingCollection.vue';
-import TopCreators from './components/sections/TopCreators.vue';
-import BrowseCategories from './components/sections/BrowseCategories.vue';
-import DiscoverNfts from './components/sections/DiscoverNfts.vue';
-import MashroomSection from './components/sections/MashroomSection.vue';
-import WeeklyDigest from './components/sections/WeeklyDigest.vue';
 import Footer from './components/sections/Footer.vue';
 </script>
+
+<style>
+/* This is the custom CSS to hide the scrollbar */
+
+/* For Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+</style>

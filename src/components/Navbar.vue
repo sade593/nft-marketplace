@@ -1,29 +1,35 @@
 <template>
-  <nav class="bg-[#2B2B2B] px-5 md:px-12 py-5 flex justify-between items-center">
-    <a href="#" class="flex items-center gap-3">
-      <img :src="logo" alt="NFT Marketplace Logo" class="h-8" />
-    </a>
+  <nav class="bg-[#3B3B3B] px-5 md:px-12 py-5 flex justify-between items-center">
+    <router-link to="/" class="flex items-center gap-3">
+      <img :src="logoIcon" alt="Logo Icon" class="w-8 h-8">
+      <span class="text-white font-bold text-xl">NFT Marketplace</span>
+    </router-link>
 
     <div class="hidden md:flex items-center gap-10 text-white font-semibold">
-      <a href="#" class="hover:text-gray-300">Marketplace</a>
-      <a href="#" class="hover:text-gray-300">Rankings</a>
-      <a href="#" class="hover:text-gray-300">Connect a wallet</a>
-      <button class="bg-[#A259FF] text-white font-semibold rounded-full py-2 px-6 flex items-center gap-3 hover:bg-[#9040ee] ml-4">
-        <img :src="userIcon" alt="User" class="h-5 w-5" />
+      <router-link to="/" class="hover:text-white">Marketplace</router-link>
+      <a href="#" class="hover:text-white">Rankings</a>
+      <a href="#" class="hover:text-white">Connect a wallet</a>
+      
+      <router-link v-if="!isLoggedIn" to="/signup" class="bg-[#A259FF] text-white font-semibold rounded-2xl py-3 px-6 flex items-center gap-3 hover:bg-purple-700">
+        <img :src="userIcon" alt="User">
         Sign Up
-      </button>
-    </div>
-
-    <div class="md:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4" />
-      </svg>
+      </router-link>
+      <router-link v-else to="/profile" class="flex items-center gap-3">
+        <img :src="profileAvatar" class="w-8 h-8 rounded-full" alt="User Avatar">
+        <span>{{ username }}</span>
+      </router-link>
     </div>
   </nav>
 </template>
 
 <script setup>
-import logo from '@/assets/images/logo.svg';
-// We've added the userIcon back
+import { computed } from 'vue';
+import { useUserStore } from '@/stores/user';
+import logoIcon from '@/assets/icons/Store.svg';
 import userIcon from '@/assets/icons/user-icon.svg';
+import profileAvatar from '@/assets/images/animakid-avatar.png';
+
+const userStore = useUserStore();
+const isLoggedIn = computed(() => userStore.isLoggedIn);
+const username = computed(() => userStore.username);
 </script>
